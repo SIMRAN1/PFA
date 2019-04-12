@@ -12,6 +12,8 @@
 		180F668F225F4F3E00BCFA65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180F668D225F4F3E00BCFA65 /* Main.storyboard */; };
 		180F6691225F4F4000BCFA65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180F6690225F4F4000BCFA65 /* Assets.xcassets */; };
 		180F6694225F4F4000BCFA65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180F6692225F4F4000BCFA65 /* LaunchScreen.storyboard */; };
+		180F669C2260A96F00BCFA65 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F669B2260A96F00BCFA65 /* SongViewController.swift */; };
+		180F669E2260BA0700BCFA65 /* HalfSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F669D2260BA0700BCFA65 /* HalfSizeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		180F6690225F4F4000BCFA65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		180F6693225F4F4000BCFA65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		180F6695225F4F4000BCFA65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		180F669B2260A96F00BCFA65 /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
+		180F669D2260BA0700BCFA65 /* HalfSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSizeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				180F6690225F4F4000BCFA65 /* Assets.xcassets */,
 				180F6692225F4F4000BCFA65 /* LaunchScreen.storyboard */,
 				180F6695225F4F4000BCFA65 /* Info.plist */,
+				180F669B2260A96F00BCFA65 /* SongViewController.swift */,
+				180F669D2260BA0700BCFA65 /* HalfSizeViewController.swift */,
 			);
 			path = PFA;
 			sourceTree = "<group>";
@@ -135,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180F669E2260BA0700BCFA65 /* HalfSizeViewController.swift in Sources */,
+				180F669C2260A96F00BCFA65 /* SongViewController.swift in Sources */,
 				180F668C225F4F3E00BCFA65 /* ViewController.swift in Sources */,
 				180F668A225F4F3E00BCFA65 /* AppDelegate.swift in Sources */,
 			);
