@@ -9,28 +9,50 @@
 import UIKit
 
 
-class SongViewController: UIViewController {
-
+class SongViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var tableView: UITableView!
+    var apps: [App]?
+    var appStoreClient = AppStoreClient()
+  //  let tableFrame: CGRect = CGRectMake(0, 0, chosenWidth, CGFloat(numOfRows) * rowHeight)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        fetchApps()
+        self.tableView.reloadData()
+        
+        self.tableView.estimatedRowHeight = tableView.rowHeight
+        self.tableView.rowHeight = UITableView.automaticDimension
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   
+    
+    func fetchApps()
+    {
+        print("1")
+        appStoreClient.fetchApps(withTerm: "link", inEntity: "musicVideo") { (apps) in
+            self.apps = apps
+            print(self.apps)
+            self.tableView.reloadData()
+            self.tableView.delegate = self
+            self.tableView.dataSource = self
+        }
     }
-    */
 
-}
-extension SongViewController : UIViewControllerTransitioningDelegate {
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return HalfSizeViewController(presentedViewController: presented, presenting: presenting)
+    
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MusicTableViewCell", for: indexPath) as! MusicTableViewCell
+        
+        cell.app = apps?[indexPath.row]
+        cell.selectionStyle = .none
+        
+        return cell
+    }
+
 }

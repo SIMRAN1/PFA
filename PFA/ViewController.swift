@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBAction func songButtonPressed(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: "SongViewController") as! SongViewController
-        vc.transitioningDelegate = vc
+        vc.transitioningDelegate = self
         vc.modalPresentationStyle = .custom
        self.present(vc, animated: true, completion: nil)
        /*let navigationController = self.navigationController
@@ -36,9 +36,16 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: false)*/
 
     }
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return HalfSizePresentationController(presentedViewController:presented, presenting: presenting)
+    }
     
-    
-    
+}
+
+class HalfSizePresentationController: UIPresentationController {
+    override var frameOfPresentedViewInContainerView: CGRect {
+        return CGRect(x: 0, y: containerView!.bounds.height/2, width: containerView!.bounds.width, height: containerView!.bounds.height/2)
+    }
 }
 
 

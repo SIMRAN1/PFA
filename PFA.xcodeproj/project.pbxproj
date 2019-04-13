@@ -14,6 +14,11 @@
 		180F6694225F4F4000BCFA65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180F6692225F4F4000BCFA65 /* LaunchScreen.storyboard */; };
 		180F669C2260A96F00BCFA65 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F669B2260A96F00BCFA65 /* SongViewController.swift */; };
 		180F669E2260BA0700BCFA65 /* HalfSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F669D2260BA0700BCFA65 /* HalfSizeViewController.swift */; };
+		18109AE3226202320029516D /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18109AE2226202320029516D /* MusicTableViewCell.swift */; };
+		18109AE52262039E0029516D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18109AE42262039E0029516D /* App.swift */; };
+		18109AE7226205B30029516D /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18109AE6226205B30029516D /* NetworkProcessor.swift */; };
+		18109AE92262061C0029516D /* AppStoreEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18109AE82262061C0029516D /* AppStoreEndpoint.swift */; };
+		18109AEB2262065A0029516D /* AppStoreClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18109AEA2262065A0029516D /* AppStoreClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		180F6695225F4F4000BCFA65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		180F669B2260A96F00BCFA65 /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
 		180F669D2260BA0700BCFA65 /* HalfSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSizeViewController.swift; sourceTree = "<group>"; };
+		18109AE2226202320029516D /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
+		18109AE42262039E0029516D /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		18109AE6226205B30029516D /* NetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
+		18109AE82262061C0029516D /* AppStoreEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreEndpoint.swift; sourceTree = "<group>"; };
+		18109AEA2262065A0029516D /* AppStoreClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				180F6689225F4F3E00BCFA65 /* AppDelegate.swift */,
+				18109AE6226205B30029516D /* NetworkProcessor.swift */,
 				180F668B225F4F3E00BCFA65 /* ViewController.swift */,
 				180F668D225F4F3E00BCFA65 /* Main.storyboard */,
 				180F6690225F4F4000BCFA65 /* Assets.xcassets */,
@@ -66,6 +77,10 @@
 				180F6695225F4F4000BCFA65 /* Info.plist */,
 				180F669B2260A96F00BCFA65 /* SongViewController.swift */,
 				180F669D2260BA0700BCFA65 /* HalfSizeViewController.swift */,
+				18109AE2226202320029516D /* MusicTableViewCell.swift */,
+				18109AE42262039E0029516D /* App.swift */,
+				18109AE82262061C0029516D /* AppStoreEndpoint.swift */,
+				18109AEA2262065A0029516D /* AppStoreClient.swift */,
 			);
 			path = PFA;
 			sourceTree = "<group>";
@@ -141,8 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18109AE92262061C0029516D /* AppStoreEndpoint.swift in Sources */,
+				18109AE3226202320029516D /* MusicTableViewCell.swift in Sources */,
+				18109AE7226205B30029516D /* NetworkProcessor.swift in Sources */,
+				18109AEB2262065A0029516D /* AppStoreClient.swift in Sources */,
 				180F669E2260BA0700BCFA65 /* HalfSizeViewController.swift in Sources */,
 				180F669C2260A96F00BCFA65 /* SongViewController.swift in Sources */,
+				18109AE52262039E0029516D /* App.swift in Sources */,
 				180F668C225F4F3E00BCFA65 /* ViewController.swift in Sources */,
 				180F668A225F4F3E00BCFA65 /* AppDelegate.swift in Sources */,
 			);
