@@ -13,7 +13,6 @@
 		180F6691225F4F4000BCFA65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180F6690225F4F4000BCFA65 /* Assets.xcassets */; };
 		180F6694225F4F4000BCFA65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180F6692225F4F4000BCFA65 /* LaunchScreen.storyboard */; };
 		180F669C2260A96F00BCFA65 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F669B2260A96F00BCFA65 /* SongViewController.swift */; };
-		180F669E2260BA0700BCFA65 /* HalfSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F669D2260BA0700BCFA65 /* HalfSizeViewController.swift */; };
 		18109AE3226202320029516D /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18109AE2226202320029516D /* MusicTableViewCell.swift */; };
 		18109AE52262039E0029516D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18109AE42262039E0029516D /* App.swift */; };
 		18109AE7226205B30029516D /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18109AE6226205B30029516D /* NetworkProcessor.swift */; };
@@ -34,7 +33,6 @@
 		180F6693225F4F4000BCFA65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		180F6695225F4F4000BCFA65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		180F669B2260A96F00BCFA65 /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
-		180F669D2260BA0700BCFA65 /* HalfSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSizeViewController.swift; sourceTree = "<group>"; };
 		18109AE2226202320029516D /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
 		18109AE42262039E0029516D /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		18109AE6226205B30029516D /* NetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
@@ -76,20 +74,15 @@
 		180F6688225F4F3E00BCFA65 /* PFA */ = {
 			isa = PBXGroup;
 			children = (
+				181DD218226677EE0099B4EA /* presentation */,
+				181DD217226677E10099B4EA /* api */,
+				181DD216226677CD0099B4EA /* view */,
+				181DD215226677B30099B4EA /* controller */,
+				181DD214226677AA0099B4EA /* model */,
 				180F6689225F4F3E00BCFA65 /* AppDelegate.swift */,
-				18109AE6226205B30029516D /* NetworkProcessor.swift */,
-				180F668B225F4F3E00BCFA65 /* ViewController.swift */,
-				180F668D225F4F3E00BCFA65 /* Main.storyboard */,
 				180F6690225F4F4000BCFA65 /* Assets.xcassets */,
 				180F6692225F4F4000BCFA65 /* LaunchScreen.storyboard */,
 				180F6695225F4F4000BCFA65 /* Info.plist */,
-				180F669B2260A96F00BCFA65 /* SongViewController.swift */,
-				180F669D2260BA0700BCFA65 /* HalfSizeViewController.swift */,
-				18109AE2226202320029516D /* MusicTableViewCell.swift */,
-				18109AE42262039E0029516D /* App.swift */,
-				18109AE82262061C0029516D /* AppStoreEndpoint.swift */,
-				18109AEA2262065A0029516D /* AppStoreClient.swift */,
-				181DD1FB2265DA570099B4EA /* HalfModelPresentationController.swift */,
 				181DD2062265DBF80099B4EA /* Transitioning */,
 			);
 			path = PFA;
@@ -104,6 +97,50 @@
 			);
 			name = Transitioning;
 			path = ../../HalfModalPresentationController/HalfModalPresentationController/Transitioning;
+			sourceTree = "<group>";
+		};
+		181DD214226677AA0099B4EA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				18109AE42262039E0029516D /* App.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		181DD215226677B30099B4EA /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				180F669B2260A96F00BCFA65 /* SongViewController.swift */,
+				180F668B225F4F3E00BCFA65 /* ViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		181DD216226677CD0099B4EA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				180F668D225F4F3E00BCFA65 /* Main.storyboard */,
+				18109AE2226202320029516D /* MusicTableViewCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		181DD217226677E10099B4EA /* api */ = {
+			isa = PBXGroup;
+			children = (
+				18109AE82262061C0029516D /* AppStoreEndpoint.swift */,
+				18109AEA2262065A0029516D /* AppStoreClient.swift */,
+				18109AE6226205B30029516D /* NetworkProcessor.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		181DD218226677EE0099B4EA /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				181DD1FB2265DA570099B4EA /* HalfModelPresentationController.swift */,
+			);
+			path = presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,7 +221,6 @@
 				181DD20C2265DBF80099B4EA /* HalfModalTransitioningDelegate.swift in Sources */,
 				18109AE7226205B30029516D /* NetworkProcessor.swift in Sources */,
 				18109AEB2262065A0029516D /* AppStoreClient.swift in Sources */,
-				180F669E2260BA0700BCFA65 /* HalfSizeViewController.swift in Sources */,
 				180F669C2260A96F00BCFA65 /* SongViewController.swift in Sources */,
 				181DD1FC2265DA570099B4EA /* HalfModelPresentationController.swift in Sources */,
 				18109AE52262039E0029516D /* App.swift in Sources */,
