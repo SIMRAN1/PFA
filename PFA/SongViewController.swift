@@ -18,12 +18,16 @@ class SongViewController: UIViewController, UITableViewDataSource, UITableViewDe
   //  let tableFrame: CGRect = CGRectMake(0, 0, chosenWidth, CGFloat(numOfRows) * rowHeight)
     
     override func viewWillAppear(_ animated: Bool) {
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 300.0
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.layer.backgroundColor = UIColor.clear.cgColor
+        tableView.backgroundColor = .clear
         self.tableView.isHidden = true
         searchTextField.isUserInteractionEnabled = true
         searchTextField.isEnabled = true
@@ -33,6 +37,22 @@ class SongViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.tableView.reloadData()
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 300.0
+        // 1
+        view.backgroundColor = .clear
+        // 2
+       
+        // 2
+        let vibrancyView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+        vibrancyView.translatesAutoresizingMaskIntoConstraints = false
+        // 3
+        view.insertSubview(vibrancyView, at: 0)
+        NSLayoutConstraint.activate([
+            vibrancyView.heightAnchor.constraint(equalTo: view.heightAnchor),
+            vibrancyView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            
+            ])
+        
+
     }
     
     @objc
@@ -59,10 +79,17 @@ class SongViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return 5
     }
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "MusicTableViewCell", for: indexPath) as! MusicTableViewCell
+        cell.layer.backgroundColor = UIColor.clear.cgColor
+        cell.backgroundColor = .clear
         if (apps?.count)!>0 {
         cell.app = apps?[indexPath.row]
+        cell.layer.backgroundColor = UIColor.clear.cgColor
+        cell.contentView.backgroundColor = UIColor.clear
         cell.selectionStyle = .none
         }  else
         {

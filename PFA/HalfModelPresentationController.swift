@@ -19,19 +19,6 @@ class HalfModalPresentationController : UIPresentationController {
         
         let view = UIView(frame: CGRect(x: 0, y: 0, width: containerView!.bounds.width, height: containerView!.bounds.height))
         
-        // Blur Effect
-        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-        view.addSubview(blurEffectView)
-        
-        // Vibrancy Effect
-        let vibrancyEffect = UIVibrancyEffect(blurEffect: blurEffect)
-        let vibrancyEffectView = UIVisualEffectView(effect: vibrancyEffect)
-        vibrancyEffectView.frame = view.bounds
-        
-        // Add the vibrancy view to the blur view
-        blurEffectView.contentView.addSubview(vibrancyEffectView)
         
         _dimmingView = view
         
