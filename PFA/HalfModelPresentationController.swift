@@ -56,7 +56,7 @@ class HalfModalPresentationController : UIPresentationController {
             print(velocity.y)
             switch state {
             case .normal:
-                presentedView!.frame.origin.y = endPoint.y + containerView!.frame.height / 2
+                presentedView!.frame.origin.y = endPoint.y + containerView!.frame.height * 1/2
             case .adjustedOnce:
                 presentedView!.frame.origin.y = endPoint.y
             }
@@ -87,8 +87,8 @@ class HalfModalPresentationController : UIPresentationController {
             UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: { () -> Void in
                 presentedView.frame = containerView.frame
                 let containerFrame = containerView.frame
-                let halfFrame = CGRect(origin: CGPoint(x: 0, y: containerFrame.height / 2),
-                                       size: CGSize(width: containerFrame.width, height: containerFrame.height / 2))
+                let halfFrame = CGRect(origin: CGPoint(x: 0, y: containerFrame.height * 3/4),
+                                       size: CGSize(width: containerFrame.width, height: containerFrame.height * 3/4))
                 let frame = state == .adjustedOnce ? containerView.frame : halfFrame
                 
                 presentedView.frame = frame
@@ -109,7 +109,7 @@ class HalfModalPresentationController : UIPresentationController {
     }
     
     override var frameOfPresentedViewInContainerView: CGRect {
-        return CGRect(x: 0, y: containerView!.bounds.height / 2, width: containerView!.bounds.width, height: containerView!.bounds.height / 2)
+        return CGRect(x: 0, y: containerView!.bounds.height * 1/4, width: containerView!.bounds.width, height: containerView!.bounds.height * 3/4)
     }
     
     override func presentationTransitionWillBegin() {

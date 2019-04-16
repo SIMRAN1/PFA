@@ -17,6 +17,11 @@ class SongViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var appStoreClient = AppStoreClient()
   //  let tableFrame: CGRect = CGRectMake(0, 0, chosenWidth, CGFloat(numOfRows) * rowHeight)
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 300.0
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.isHidden = true
@@ -26,9 +31,8 @@ class SongViewController: UIViewController, UITableViewDataSource, UITableViewDe
         searchTextField.addTarget(self, action: #selector(SongViewController.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         
         self.tableView.reloadData()
-        
-        self.tableView.estimatedRowHeight = tableView.rowHeight
         self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 300.0
     }
     
     @objc
@@ -42,6 +46,8 @@ class SongViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 self.tableView.reloadData()
                 self.tableView.delegate = self
                 self.tableView.dataSource = self
+                self.tableView.rowHeight = UITableView.automaticDimension
+                self.tableView.estimatedRowHeight = 300.0
             }
         } else {
             self.tableView.isHidden = true
@@ -49,13 +55,6 @@ class SongViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     
-    
-   
-    
-    
-
-    
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
