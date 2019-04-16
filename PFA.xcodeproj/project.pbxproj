@@ -19,6 +19,10 @@
 		18109AE7226205B30029516D /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18109AE6226205B30029516D /* NetworkProcessor.swift */; };
 		18109AE92262061C0029516D /* AppStoreEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18109AE82262061C0029516D /* AppStoreEndpoint.swift */; };
 		18109AEB2262065A0029516D /* AppStoreClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18109AEA2262065A0029516D /* AppStoreClient.swift */; };
+		181DD1FC2265DA570099B4EA /* HalfModelPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DD1FB2265DA570099B4EA /* HalfModelPresentationController.swift */; };
+		181DD20A2265DBF80099B4EA /* HalfModalInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DD2072265DBF80099B4EA /* HalfModalInteractiveTransition.swift */; };
+		181DD20B2265DBF80099B4EA /* HalfModalTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DD2082265DBF80099B4EA /* HalfModalTransitionAnimator.swift */; };
+		181DD20C2265DBF80099B4EA /* HalfModalTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DD2092265DBF80099B4EA /* HalfModalTransitioningDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		18109AE6226205B30029516D /* NetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
 		18109AE82262061C0029516D /* AppStoreEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreEndpoint.swift; sourceTree = "<group>"; };
 		18109AEA2262065A0029516D /* AppStoreClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreClient.swift; sourceTree = "<group>"; };
+		181DD1FB2265DA570099B4EA /* HalfModelPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModelPresentationController.swift; sourceTree = "<group>"; };
+		181DD2072265DBF80099B4EA /* HalfModalInteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalInteractiveTransition.swift; sourceTree = "<group>"; };
+		181DD2082265DBF80099B4EA /* HalfModalTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalTransitionAnimator.swift; sourceTree = "<group>"; };
+		181DD2092265DBF80099B4EA /* HalfModalTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalTransitioningDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +89,21 @@
 				18109AE42262039E0029516D /* App.swift */,
 				18109AE82262061C0029516D /* AppStoreEndpoint.swift */,
 				18109AEA2262065A0029516D /* AppStoreClient.swift */,
+				181DD1FB2265DA570099B4EA /* HalfModelPresentationController.swift */,
+				181DD2062265DBF80099B4EA /* Transitioning */,
 			);
 			path = PFA;
+			sourceTree = "<group>";
+		};
+		181DD2062265DBF80099B4EA /* Transitioning */ = {
+			isa = PBXGroup;
+			children = (
+				181DD2072265DBF80099B4EA /* HalfModalInteractiveTransition.swift */,
+				181DD2082265DBF80099B4EA /* HalfModalTransitionAnimator.swift */,
+				181DD2092265DBF80099B4EA /* HalfModalTransitioningDelegate.swift */,
+			);
+			name = Transitioning;
+			path = ../../HalfModalPresentationController/HalfModalPresentationController/Transitioning;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,10 +179,14 @@
 			files = (
 				18109AE92262061C0029516D /* AppStoreEndpoint.swift in Sources */,
 				18109AE3226202320029516D /* MusicTableViewCell.swift in Sources */,
+				181DD20B2265DBF80099B4EA /* HalfModalTransitionAnimator.swift in Sources */,
+				181DD20A2265DBF80099B4EA /* HalfModalInteractiveTransition.swift in Sources */,
+				181DD20C2265DBF80099B4EA /* HalfModalTransitioningDelegate.swift in Sources */,
 				18109AE7226205B30029516D /* NetworkProcessor.swift in Sources */,
 				18109AEB2262065A0029516D /* AppStoreClient.swift in Sources */,
 				180F669E2260BA0700BCFA65 /* HalfSizeViewController.swift in Sources */,
 				180F669C2260A96F00BCFA65 /* SongViewController.swift in Sources */,
+				181DD1FC2265DA570099B4EA /* HalfModelPresentationController.swift in Sources */,
 				18109AE52262039E0029516D /* App.swift in Sources */,
 				180F668C225F4F3E00BCFA65 /* ViewController.swift in Sources */,
 				180F668A225F4F3E00BCFA65 /* AppDelegate.swift in Sources */,

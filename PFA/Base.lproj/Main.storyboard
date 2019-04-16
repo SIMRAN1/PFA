@@ -38,6 +38,7 @@
                                                 <state key="normal" image="add"/>
                                                 <connections>
                                                     <action selector="songButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0aQ-wv-aYs"/>
+                                                    <segue destination="HRw-hY-diW" kind="presentation" id="Wyq-Zz-CtJ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -153,6 +154,22 @@
             </objects>
             <point key="canvasLocation" x="-970" y="-351"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ei9-Fw-MIq">
+            <objects>
+                <navigationController id="HRw-hY-diW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZfO-vu-q7A">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Sk2-KJ-XiT" kind="relationship" relationship="rootViewController" id="Y7g-jJ-K4d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pxW-8V-QiK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-215" y="-572"/>
+        </scene>
         <!--Song View Controller-->
         <scene sceneID="GJc-uv-z3h">
             <objects>
@@ -162,23 +179,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="search" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uG2-l8-A3L">
-                                <rect key="frame" x="16" y="20" width="343" height="49"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="49"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IKD-Xq-khO">
-                                <rect key="frame" x="16" y="92" width="343" height="555"/>
+                                <rect key="frame" x="0.0" y="112" width="375" height="555"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="555" id="icf-Bf-aoX"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MusicTableViewCell" rowHeight="69" id="CuN-NZ-7uh" customClass="MusicTableViewCell" customModule="PFA" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="69"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CuN-NZ-7uh" id="ow3-YA-V6y">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="68.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="68.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K0U-dw-cm3">
@@ -229,12 +243,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="IKD-Xq-khO" firstAttribute="trailing" secondItem="uG2-l8-A3L" secondAttribute="trailing" id="Glz-d9-IRt"/>
-                            <constraint firstItem="IKD-Xq-khO" firstAttribute="trailing" secondItem="PJC-9k-hCd" secondAttribute="trailingMargin" id="OqF-By-XLJ"/>
-                            <constraint firstItem="IKD-Xq-khO" firstAttribute="leading" secondItem="PJC-9k-hCd" secondAttribute="leadingMargin" id="RnT-Fx-23m"/>
-                            <constraint firstItem="IKD-Xq-khO" firstAttribute="top" secondItem="uG2-l8-A3L" secondAttribute="bottom" constant="23" id="aRM-ds-GVK"/>
-                            <constraint firstItem="IKD-Xq-khO" firstAttribute="leading" secondItem="uG2-l8-A3L" secondAttribute="leading" id="aWG-ws-ZX2"/>
-                            <constraint firstAttribute="bottom" secondItem="IKD-Xq-khO" secondAttribute="bottom" constant="20" symbolic="YES" id="aqK-PE-bvv"/>
+                            <constraint firstItem="IKD-Xq-khO" firstAttribute="trailing" secondItem="uG2-l8-A3L" secondAttribute="trailing" id="25Z-8O-ocZ"/>
+                            <constraint firstItem="IKD-Xq-khO" firstAttribute="top" secondItem="6CI-kf-2wA" secondAttribute="top" constant="48" id="5rH-TU-7HK"/>
+                            <constraint firstItem="uG2-l8-A3L" firstAttribute="leading" secondItem="PJC-9k-hCd" secondAttribute="leading" id="99c-AY-n47"/>
+                            <constraint firstItem="IKD-Xq-khO" firstAttribute="bottom" secondItem="6CI-kf-2wA" secondAttribute="bottom" id="UjP-7S-Bsr"/>
+                            <constraint firstItem="uG2-l8-A3L" firstAttribute="top" secondItem="6CI-kf-2wA" secondAttribute="top" id="eqS-h5-bdf"/>
+                            <constraint firstItem="IKD-Xq-khO" firstAttribute="leading" secondItem="uG2-l8-A3L" secondAttribute="leading" id="jOk-Ki-UC2"/>
+                            <constraint firstAttribute="trailing" secondItem="uG2-l8-A3L" secondAttribute="trailing" id="zH4-WS-EIH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6CI-kf-2wA"/>
                     </view>
@@ -246,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dRM-Jt-zZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244" y="-351.27436281859076"/>
+            <point key="canvasLocation" x="1084" y="-573.46326836581716"/>
         </scene>
     </scenes>
     <resources>
