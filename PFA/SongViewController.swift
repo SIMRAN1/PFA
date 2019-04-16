@@ -9,7 +9,7 @@
 import UIKit
 
 
-class SongViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SongViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
@@ -19,26 +19,40 @@ class SongViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchApps()
+        self.tableView.isHidden = true
+        searchTextField.isUserInteractionEnabled = true
+        searchTextField.isEnabled = true
+        searchTextField.becomeFirstResponder()
+        searchTextField.addTarget(self, action: #selector(SongViewController.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+        
         self.tableView.reloadData()
         
         self.tableView.estimatedRowHeight = tableView.rowHeight
         self.tableView.rowHeight = UITableView.automaticDimension
     }
     
-   
-    
-    func fetchApps()
-    {
-        print("1")
-        appStoreClient.fetchApps(withTerm: "link", inEntity: "musicVideo") { (apps) in
-            self.apps = apps
-            print(self.apps)
-            self.tableView.reloadData()
-            self.tableView.delegate = self
-            self.tableView.dataSource = self
+    @objc
+    func textFieldDidChange(textField : UITextField){
+        let count = searchTextField.text?.count
+        if count!>3 {
+            self.tableView.isHidden = false
+            appStoreClient.fetchApps(withTerm: searchTextField.text!, inEntity: "musicVideo") { (apps) in
+                self.apps = apps
+                print(self.apps)
+                self.tableView.reloadData()
+                self.tableView.delegate = self
+                self.tableView.dataSource = self
+            }
+        } else {
+            self.tableView.isHidden = true
         }
     }
+    
+    
+    
+   
+    
+    
 
     
 
@@ -48,9 +62,13 @@ class SongViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MusicTableViewCell", for: indexPath) as! MusicTableViewCell
-        
+        if (apps?.count)!>0 {
         cell.app = apps?[indexPath.row]
         cell.selectionStyle = .none
+        }  else
+        {
+            self.tableView.isHidden = true
+        }
         
         return cell
     }
