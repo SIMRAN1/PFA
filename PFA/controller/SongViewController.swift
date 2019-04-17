@@ -82,6 +82,7 @@ class SongViewController: UIViewController,UITableViewDelegate{
                 self.tableView.reloadData()
                 self.tableView.delegate = self
                 self.tableView.dataSource = self.dataSource
+                self.tableView.tableFooterView = UIView()
                 self.dataSource.data.addAndNotify(observer: self) { [weak self] _ in
                 self?.tableView.reloadData()
             }

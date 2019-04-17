@@ -12,7 +12,13 @@ class SongDataSource : GenericDataSource<App>, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        var count: Int
+        if self.data.value.count<5 {
+            count = self.data.value.count
+        } else {
+            count = 5
+        }
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -21,7 +27,7 @@ class SongDataSource : GenericDataSource<App>, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MusicTableViewCell", for: indexPath) as! MusicTableViewCell
         cell.layer.backgroundColor = UIColor.clear.cgColor
         cell.backgroundColor = .clear
-        if (self.data.value.count)>0 {
+        if (self.data.value.count>0) {
             cell.app = self.data.value[indexPath.row]
             cell.layer.backgroundColor = UIColor.clear.cgColor
             cell.contentView.backgroundColor = UIColor.clear
