@@ -25,6 +25,7 @@
 		1846DB1C2266B78E001C0785 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846DB1B2266B78E001C0785 /* DynamicValue.swift */; };
 		1846DB1F2266B997001C0785 /* SongDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846DB1E2266B997001C0785 /* SongDataSource.swift */; };
 		1846DB212266BB55001C0785 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846DB202266BB55001C0785 /* SongViewModel.swift */; };
+		18F4D10022670CD300A5E73B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4D0FF22670CD300A5E73B /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		1846DB1B2266B78E001C0785 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
 		1846DB1E2266B997001C0785 /* SongDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDataSource.swift; sourceTree = "<group>"; };
 		1846DB202266BB55001C0785 /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
+		18F4D0FF22670CD300A5E73B /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +63,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BFFE1F27ABA873D01162F05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		180F667D225F4F3E00BCFA65 = {
 			isa = PBXGroup;
 			children = (
 				180F6688225F4F3E00BCFA65 /* PFA */,
 				180F6687225F4F3E00BCFA65 /* Products */,
+				0BFFE1F27ABA873D01162F05 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,20 +100,20 @@
 				180F6690225F4F4000BCFA65 /* Assets.xcassets */,
 				180F6692225F4F4000BCFA65 /* LaunchScreen.storyboard */,
 				180F6695225F4F4000BCFA65 /* Info.plist */,
-				181DD2062265DBF80099B4EA /* Transitioning */,
+				181DD2062265DBF80099B4EA /* transition */,
 			);
 			path = PFA;
 			sourceTree = "<group>";
 		};
-		181DD2062265DBF80099B4EA /* Transitioning */ = {
+		181DD2062265DBF80099B4EA /* transition */ = {
 			isa = PBXGroup;
 			children = (
 				181DD2072265DBF80099B4EA /* HalfModalInteractiveTransition.swift */,
 				181DD2082265DBF80099B4EA /* HalfModalTransitionAnimator.swift */,
 				181DD2092265DBF80099B4EA /* HalfModalTransitioningDelegate.swift */,
 			);
-			name = Transitioning;
-			path = ../../HalfModalPresentationController/HalfModalPresentationController/Transitioning;
+			name = transition;
+			path = ../../HalfModalPresentationController/HalfModalPresentationController/transition;
 			sourceTree = "<group>";
 		};
 		181DD214226677AA0099B4EA /* model */ = {
@@ -111,6 +121,7 @@
 			children = (
 				18109AE42262039E0029516D /* App.swift */,
 				1846DB1B2266B78E001C0785 /* DynamicValue.swift */,
+				18F4D0FF22670CD300A5E73B /* Reachability.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -245,6 +256,7 @@
 				181DD1FC2265DA570099B4EA /* HalfModelPresentationController.swift in Sources */,
 				18109AE52262039E0029516D /* App.swift in Sources */,
 				180F668C225F4F3E00BCFA65 /* ViewController.swift in Sources */,
+				18F4D10022670CD300A5E73B /* Reachability.swift in Sources */,
 				180F668A225F4F3E00BCFA65 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

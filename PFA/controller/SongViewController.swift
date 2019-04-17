@@ -9,10 +9,15 @@
 import UIKit
 
 
+
 class SongViewController: UIViewController,UITableViewDelegate{
     
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    
+    let reachability = Reachability()
+    
+     let alert = UIAlertController(title: "Warning", message: "Please Connect to Internet", preferredStyle: .alert)
     
     let dataSource = SongDataSource()
     
@@ -39,6 +44,7 @@ class SongViewController: UIViewController,UITableViewDelegate{
         self.tableView.isHidden = true
         searchTextField.isUserInteractionEnabled = true
         searchTextField.isEnabled = true
+        checkReachability()
         searchTextField.becomeFirstResponder()
         searchTextField.addTarget(self, action: #selector(SongViewController.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         
@@ -63,6 +69,9 @@ class SongViewController: UIViewController,UITableViewDelegate{
 
     }
     
+    
+    
+    
     @objc
     func textFieldDidChange(textField : UITextField){
         let count = searchTextField.text?.count
@@ -84,7 +93,26 @@ class SongViewController: UIViewController,UITableViewDelegate{
         }
     }
     
+    func checkReachability() {
+        
+        if Reachability.isConnectedToNetwork(){
+            self.setUIBasedOnReachability(value: true)
+        }else{
+            self.setUIBasedOnReachability(value: false)
+        }
+        
+    }
     
+    func setUIBasedOnReachability(value: Bool) {
+        DispatchQueue.main.async {
+            self.searchTextField.isEnabled = value
+            if value {
+                self.alert.dismiss(animated: true, completion: nil)
+            } else {
+                self.present(self.alert, animated: true, completion: nil)
+            }
+        }
+    }
    
 
 }
