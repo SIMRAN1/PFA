@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MusicTableViewCell: UITableViewCell {
 
@@ -37,7 +38,7 @@ class MusicTableViewCell: UITableViewCell {
             networkProcessor.downloadData(completion: { (data, response, error) in
                 DispatchQueue.main.async {
                     if let imageData = data {
-                        self.artworkUrl.image = UIImage(data: imageData)
+                        self.artworkUrl.sd_setImage(with: url, placeholderImage: UIImage(named: "empty.png"))
                         self.artworkUrl.layer.cornerRadius = 5.0
                         self.artworkUrl.layer.masksToBounds = true
                     }

@@ -26,6 +26,7 @@
 		1846DB1F2266B997001C0785 /* SongDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846DB1E2266B997001C0785 /* SongDataSource.swift */; };
 		1846DB212266BB55001C0785 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846DB202266BB55001C0785 /* SongViewModel.swift */; };
 		18F4D10022670CD300A5E73B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4D0FF22670CD300A5E73B /* Reachability.swift */; };
+		D96380976FEB51821E35B910 /* Pods_PFA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C418C3FC62475E1FA25F94 /* Pods_PFA.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,9 @@
 		1846DB1E2266B997001C0785 /* SongDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDataSource.swift; sourceTree = "<group>"; };
 		1846DB202266BB55001C0785 /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
 		18F4D0FF22670CD300A5E73B /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		9B2AE807B89F75C55B6C547D /* Pods-PFA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PFA.debug.xcconfig"; path = "Target Support Files/Pods-PFA/Pods-PFA.debug.xcconfig"; sourceTree = "<group>"; };
+		C81ABD71AF26D79B8C85EBAE /* Pods-PFA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PFA.release.xcconfig"; path = "Target Support Files/Pods-PFA/Pods-PFA.release.xcconfig"; sourceTree = "<group>"; };
+		F1C418C3FC62475E1FA25F94 /* Pods_PFA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PFA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D96380976FEB51821E35B910 /* Pods_PFA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,8 @@
 		0BFFE1F27ABA873D01162F05 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				9B2AE807B89F75C55B6C547D /* Pods-PFA.debug.xcconfig */,
+				C81ABD71AF26D79B8C85EBAE /* Pods-PFA.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -76,6 +83,7 @@
 				180F6688225F4F3E00BCFA65 /* PFA */,
 				180F6687225F4F3E00BCFA65 /* Products */,
 				0BFFE1F27ABA873D01162F05 /* Pods */,
+				9D58B3784F409B2DDC9CB152 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,6 +178,14 @@
 			path = viewmodel;
 			sourceTree = "<group>";
 		};
+		9D58B3784F409B2DDC9CB152 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1C418C3FC62475E1FA25F94 /* Pods_PFA.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 180F6698225F4F4000BCFA65 /* Build configuration list for PBXNativeTarget "PFA" */;
 			buildPhases = (
+				A087430B13CAE35334371047 /* [CP] Check Pods Manifest.lock */,
 				180F6682225F4F3E00BCFA65 /* Sources */,
 				180F6683225F4F3E00BCFA65 /* Frameworks */,
 				180F6684225F4F3E00BCFA65 /* Resources */,
+				3A93FA9B83E64B6836D59351 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +253,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A93FA9B83E64B6836D59351 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PFA/Pods-PFA-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PFA/Pods-PFA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A087430B13CAE35334371047 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PFA-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		180F6682225F4F3E00BCFA65 /* Sources */ = {
@@ -400,6 +465,7 @@
 		};
 		180F6699225F4F4000BCFA65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B2AE807B89F75C55B6C547D /* Pods-PFA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -417,6 +483,7 @@
 		};
 		180F669A225F4F4000BCFA65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C81ABD71AF26D79B8C85EBAE /* Pods-PFA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
