@@ -19,9 +19,9 @@
 		18109AE92262061C0029516D /* AppStoreEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18109AE82262061C0029516D /* AppStoreEndpoint.swift */; };
 		18109AEB2262065A0029516D /* AppStoreClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18109AEA2262065A0029516D /* AppStoreClient.swift */; };
 		181DD1FC2265DA570099B4EA /* HalfModelPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DD1FB2265DA570099B4EA /* HalfModelPresentationController.swift */; };
-		181DD20A2265DBF80099B4EA /* HalfModalInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DD2072265DBF80099B4EA /* HalfModalInteractiveTransition.swift */; };
-		181DD20B2265DBF80099B4EA /* HalfModalTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DD2082265DBF80099B4EA /* HalfModalTransitionAnimator.swift */; };
-		181DD20C2265DBF80099B4EA /* HalfModalTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DD2092265DBF80099B4EA /* HalfModalTransitioningDelegate.swift */; };
+		1827E64D2267185300E15334 /* HalfModalInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827E64C2267185300E15334 /* HalfModalInteractiveTransition.swift */; };
+		1827E64F2267187000E15334 /* HalfModalTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827E64E2267187000E15334 /* HalfModalTransitionAnimator.swift */; };
+		1827E6512267188E00E15334 /* HalfModalTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827E6502267188E00E15334 /* HalfModalTransitioningDelegate.swift */; };
 		1846DB1C2266B78E001C0785 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846DB1B2266B78E001C0785 /* DynamicValue.swift */; };
 		1846DB1F2266B997001C0785 /* SongDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846DB1E2266B997001C0785 /* SongDataSource.swift */; };
 		1846DB212266BB55001C0785 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846DB202266BB55001C0785 /* SongViewModel.swift */; };
@@ -43,9 +43,9 @@
 		18109AE82262061C0029516D /* AppStoreEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreEndpoint.swift; sourceTree = "<group>"; };
 		18109AEA2262065A0029516D /* AppStoreClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreClient.swift; sourceTree = "<group>"; };
 		181DD1FB2265DA570099B4EA /* HalfModelPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModelPresentationController.swift; sourceTree = "<group>"; };
-		181DD2072265DBF80099B4EA /* HalfModalInteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalInteractiveTransition.swift; sourceTree = "<group>"; };
-		181DD2082265DBF80099B4EA /* HalfModalTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalTransitionAnimator.swift; sourceTree = "<group>"; };
-		181DD2092265DBF80099B4EA /* HalfModalTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalTransitioningDelegate.swift; sourceTree = "<group>"; };
+		1827E64C2267185300E15334 /* HalfModalInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalInteractiveTransition.swift; sourceTree = "<group>"; };
+		1827E64E2267187000E15334 /* HalfModalTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalTransitionAnimator.swift; sourceTree = "<group>"; };
+		1827E6502267188E00E15334 /* HalfModalTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalTransitioningDelegate.swift; sourceTree = "<group>"; };
 		1846DB1B2266B78E001C0785 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
 		1846DB1E2266B997001C0785 /* SongDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDataSource.swift; sourceTree = "<group>"; };
 		1846DB202266BB55001C0785 /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
@@ -90,6 +90,7 @@
 		180F6688225F4F3E00BCFA65 /* PFA */ = {
 			isa = PBXGroup;
 			children = (
+				1827E64B2267184000E15334 /* transition */,
 				1846DB1D2266B944001C0785 /* viewmodel */,
 				181DD218226677EE0099B4EA /* presentation */,
 				181DD217226677E10099B4EA /* api */,
@@ -100,20 +101,8 @@
 				180F6690225F4F4000BCFA65 /* Assets.xcassets */,
 				180F6692225F4F4000BCFA65 /* LaunchScreen.storyboard */,
 				180F6695225F4F4000BCFA65 /* Info.plist */,
-				181DD2062265DBF80099B4EA /* transition */,
 			);
 			path = PFA;
-			sourceTree = "<group>";
-		};
-		181DD2062265DBF80099B4EA /* transition */ = {
-			isa = PBXGroup;
-			children = (
-				181DD2072265DBF80099B4EA /* HalfModalInteractiveTransition.swift */,
-				181DD2082265DBF80099B4EA /* HalfModalTransitionAnimator.swift */,
-				181DD2092265DBF80099B4EA /* HalfModalTransitioningDelegate.swift */,
-			);
-			name = transition;
-			path = ../../HalfModalPresentationController/HalfModalPresentationController/transition;
 			sourceTree = "<group>";
 		};
 		181DD214226677AA0099B4EA /* model */ = {
@@ -160,6 +149,16 @@
 				181DD1FB2265DA570099B4EA /* HalfModelPresentationController.swift */,
 			);
 			path = presentation;
+			sourceTree = "<group>";
+		};
+		1827E64B2267184000E15334 /* transition */ = {
+			isa = PBXGroup;
+			children = (
+				1827E64C2267185300E15334 /* HalfModalInteractiveTransition.swift */,
+				1827E64E2267187000E15334 /* HalfModalTransitionAnimator.swift */,
+				1827E6502267188E00E15334 /* HalfModalTransitioningDelegate.swift */,
+			);
+			path = transition;
 			sourceTree = "<group>";
 		};
 		1846DB1D2266B944001C0785 /* viewmodel */ = {
@@ -244,16 +243,16 @@
 			files = (
 				18109AE92262061C0029516D /* AppStoreEndpoint.swift in Sources */,
 				18109AE3226202320029516D /* MusicTableViewCell.swift in Sources */,
-				181DD20B2265DBF80099B4EA /* HalfModalTransitionAnimator.swift in Sources */,
-				181DD20A2265DBF80099B4EA /* HalfModalInteractiveTransition.swift in Sources */,
 				1846DB212266BB55001C0785 /* SongViewModel.swift in Sources */,
 				1846DB1C2266B78E001C0785 /* DynamicValue.swift in Sources */,
-				181DD20C2265DBF80099B4EA /* HalfModalTransitioningDelegate.swift in Sources */,
 				18109AE7226205B30029516D /* NetworkProcessor.swift in Sources */,
 				1846DB1F2266B997001C0785 /* SongDataSource.swift in Sources */,
+				1827E64D2267185300E15334 /* HalfModalInteractiveTransition.swift in Sources */,
 				18109AEB2262065A0029516D /* AppStoreClient.swift in Sources */,
+				1827E64F2267187000E15334 /* HalfModalTransitionAnimator.swift in Sources */,
 				180F669C2260A96F00BCFA65 /* SongViewController.swift in Sources */,
 				181DD1FC2265DA570099B4EA /* HalfModelPresentationController.swift in Sources */,
+				1827E6512267188E00E15334 /* HalfModalTransitioningDelegate.swift in Sources */,
 				18109AE52262039E0029516D /* App.swift in Sources */,
 				180F668C225F4F3E00BCFA65 /* ViewController.swift in Sources */,
 				18F4D10022670CD300A5E73B /* Reachability.swift in Sources */,
