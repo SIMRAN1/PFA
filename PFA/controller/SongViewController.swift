@@ -9,10 +9,18 @@
 import UIKit
 
 
-class SongViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class SongViewController: UIViewController,UITableViewDelegate{
     
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    
+    let dataSource = SongDataSource()
+    
+    lazy var viewModel : SongViewModel = {
+        let viewModel = SongViewModel(dataSource: dataSource)
+        return viewModel
+    }()
+    
     var apps: [App]?
     var appStoreClient = AppStoreClient()
   //  let tableFrame: CGRect = CGRectMake(0, 0, chosenWidth, CGFloat(numOfRows) * rowHeight)
@@ -60,43 +68,23 @@ class SongViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let count = searchTextField.text?.count
         if count!>3 {
             self.tableView.isHidden = false
-            appStoreClient.fetchApps(withTerm: searchTextField.text!, inEntity: "musicVideo") { (apps) in
-                self.apps = apps
+                self.viewModel.fetchSongs(term: searchTextField.text!)
                 print(self.apps)
                 self.tableView.reloadData()
                 self.tableView.delegate = self
-                self.tableView.dataSource = self
+                self.tableView.dataSource = self.dataSource
+                self.dataSource.data.addAndNotify(observer: self) { [weak self] _ in
+                self?.tableView.reloadData()
+            }
                 self.tableView.rowHeight = UITableView.automaticDimension
                 self.tableView.estimatedRowHeight = 300.0
-            }
+            
         } else {
             self.tableView.isHidden = true
         }
     }
     
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MusicTableViewCell", for: indexPath) as! MusicTableViewCell
-        cell.layer.backgroundColor = UIColor.clear.cgColor
-        cell.backgroundColor = .clear
-        if (apps?.count)!>0 {
-        cell.app = apps?[indexPath.row]
-        cell.layer.backgroundColor = UIColor.clear.cgColor
-        cell.contentView.backgroundColor = UIColor.clear
-        cell.selectionStyle = .none
-        }  else
-        {
-            self.tableView.isHidden = true
-        }
-        
-        return cell
-    }
+   
 
 }

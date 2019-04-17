@@ -1,7 +1,5 @@
 import Foundation
 
-// example: https://itunes.apple.com/search?term=iron man&entity=...&country=japan
-
 enum AppStoreEndpoint
 {
     case search(term: String, entity: String)

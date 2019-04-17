@@ -22,6 +22,9 @@
 		181DD20A2265DBF80099B4EA /* HalfModalInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DD2072265DBF80099B4EA /* HalfModalInteractiveTransition.swift */; };
 		181DD20B2265DBF80099B4EA /* HalfModalTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DD2082265DBF80099B4EA /* HalfModalTransitionAnimator.swift */; };
 		181DD20C2265DBF80099B4EA /* HalfModalTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DD2092265DBF80099B4EA /* HalfModalTransitioningDelegate.swift */; };
+		1846DB1C2266B78E001C0785 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846DB1B2266B78E001C0785 /* DynamicValue.swift */; };
+		1846DB1F2266B997001C0785 /* SongDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846DB1E2266B997001C0785 /* SongDataSource.swift */; };
+		1846DB212266BB55001C0785 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846DB202266BB55001C0785 /* SongViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		181DD2072265DBF80099B4EA /* HalfModalInteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalInteractiveTransition.swift; sourceTree = "<group>"; };
 		181DD2082265DBF80099B4EA /* HalfModalTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalTransitionAnimator.swift; sourceTree = "<group>"; };
 		181DD2092265DBF80099B4EA /* HalfModalTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalTransitioningDelegate.swift; sourceTree = "<group>"; };
+		1846DB1B2266B78E001C0785 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
+		1846DB1E2266B997001C0785 /* SongDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDataSource.swift; sourceTree = "<group>"; };
+		1846DB202266BB55001C0785 /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 		180F6688225F4F3E00BCFA65 /* PFA */ = {
 			isa = PBXGroup;
 			children = (
+				1846DB1D2266B944001C0785 /* viewmodel */,
 				181DD218226677EE0099B4EA /* presentation */,
 				181DD217226677E10099B4EA /* api */,
 				181DD216226677CD0099B4EA /* view */,
@@ -103,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				18109AE42262039E0029516D /* App.swift */,
+				1846DB1B2266B78E001C0785 /* DynamicValue.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -141,6 +149,15 @@
 				181DD1FB2265DA570099B4EA /* HalfModelPresentationController.swift */,
 			);
 			path = presentation;
+			sourceTree = "<group>";
+		};
+		1846DB1D2266B944001C0785 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				1846DB1E2266B997001C0785 /* SongDataSource.swift */,
+				1846DB202266BB55001C0785 /* SongViewModel.swift */,
+			);
+			path = viewmodel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,8 +235,11 @@
 				18109AE3226202320029516D /* MusicTableViewCell.swift in Sources */,
 				181DD20B2265DBF80099B4EA /* HalfModalTransitionAnimator.swift in Sources */,
 				181DD20A2265DBF80099B4EA /* HalfModalInteractiveTransition.swift in Sources */,
+				1846DB212266BB55001C0785 /* SongViewModel.swift in Sources */,
+				1846DB1C2266B78E001C0785 /* DynamicValue.swift in Sources */,
 				181DD20C2265DBF80099B4EA /* HalfModalTransitioningDelegate.swift in Sources */,
 				18109AE7226205B30029516D /* NetworkProcessor.swift in Sources */,
+				1846DB1F2266B997001C0785 /* SongDataSource.swift in Sources */,
 				18109AEB2262065A0029516D /* AppStoreClient.swift in Sources */,
 				180F669C2260A96F00BCFA65 /* SongViewController.swift in Sources */,
 				181DD1FC2265DA570099B4EA /* HalfModelPresentationController.swift in Sources */,
